@@ -1,0 +1,281 @@
+$goiaba: #db524d;
+$goiaba-leve: #df645f;
+$white: #fff;
+$other-white: #ebebeb;
+$reset: #0000ff;
+$mega: #209869;
+$lotofacil: #930089;
+$quina: #260085;
+$lotomania: #f78100;
+$green-leaf: #13a10e;
+
+@mixin flx($property, $jty-ctn) {
+    display: flex;
+    #{$property}: $jty-ctn;
+}
+
+@mixin for-phone-only {
+    @media (max-width: 767.98px) { @content; }
+}
+
+@mixin for-tablet-only {
+    @media (min-width: 768px) and (max-width: 1199.98px) { @content; }
+}
+
+@mixin for-desktop-only {
+    @media (min-width: 1200px) { @content; }
+}
+
+@font-face {
+    font-family: Digital;
+    src: url(../fonts/digital.ttf);
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'ArialRounded', -apple-system, BlinkMacSystemFont,
+      'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-weight: 300;
+    -webkit-tap-highlight-color: transparent;
+    background-color: $goiaba;
+    overflow-y: hidden;
+}
+
+.header {
+    &__title {
+        @include flx(justify-content, center);
+        text-align: center;
+        margin: 50px 0;
+    }
+
+    &__h1 {
+        color: $white;
+        font-size: 50px;
+        font-weight: bold;
+        @include for-phone-only {
+            width: 90%;
+            padding: 15px 0;
+            flex-wrap: wrap;
+        }
+
+        @include for-tablet-only {
+            width: 80%;
+            padding: 20px 0;
+        }
+
+        @include for-desktop-only {
+            width: 60%;
+            padding: 15px 0;
+            flex-wrap: wrap;
+        }
+    }
+
+    .menu {
+        &__list {
+            @include flx(justify-content, center);
+            border-top: 2px solid $goiaba-leve;
+            border-bottom: 2px solid $goiaba-leve;
+            margin-left: auto;
+            margin-right: auto;
+            @include for-phone-only {
+                width: 90%;
+                padding: 15px 0;
+                flex-wrap: wrap;
+            }
+
+            @include for-tablet-only {
+                width: 80%;
+                padding: 20px 0;
+            }
+
+            @include for-desktop-only {
+                width: 60%;
+                padding: 15px 0;
+                flex-wrap: wrap;
+            }
+        }
+
+        &__links {
+            position: relative;
+            @include for-phone-only {
+                padding: 5px 0;
+            }
+            &:not(:last-child):after {
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: -3px;
+                margin: auto;
+                height: 15px;
+                width: 2px;
+                background-color: $goiaba-leve;
+            }
+        }
+
+        &__link {
+            padding: 0 25px;
+            color: $other-white;
+            font-size: 20px;
+            font-weight: bold;
+
+            &:hover {
+                color: $green-leaf;
+            }
+        }
+    }
+
+}
+
+.main {
+    display: block;
+    color: $white;
+    margin: 50px 0 0;
+
+    &__conteudo {
+        padding: 0 12px;
+        max-width: 620px;
+        margin: auto;
+    }
+
+    &__alinhado {
+        text-align: center;
+    }
+
+    &__box {
+        max-width: 480px;
+        margin: auto;
+    }
+
+    &__display {
+        font-family: Digital !important;
+        background-color: $goiaba-leve;
+        padding: 20px 0 30px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    &__resultado {
+        font-size: 160px;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    &__botao {
+       position: relative;
+        display: inline-block;
+        width: 100%;
+
+        .btn {
+            &__gerar {
+                cursor: pointer;
+                border: none;
+                margin: 20px 0 0;
+                padding: 0 12px;
+                border-radius: 4px;
+                box-shadow: $other-white 0 6px 0;
+                font-size: 22px;
+                height: 55px;
+                color: $goiaba-leve;
+                font-weight: bold;
+                width: 200px;
+            }
+
+            &__reset {
+                cursor: pointer;
+                border: none;
+                margin: 20px 0 0;
+                padding: 0 12px;
+                border-radius: 4px;
+                box-shadow: $reset 0 6px 0;
+                background-color: $reset;
+                font-size: 22px;
+                height: 55px;
+                color: $white;
+                font-weight: bold;
+                width: 200px;
+            }
+
+            &__mega {
+                cursor: pointer;
+                border: none;
+                margin: 20px 0 0;
+                padding: 0 12px;
+                border-radius: 4px;
+                box-shadow: $mega 0 6px 0;
+                background-color: $mega;
+                font-size: 22px;
+                height: 55px;
+                color: $white;
+                font-weight: bold;
+                width: 200px;
+            }
+
+            &__lotofacil {
+                cursor: pointer;
+                border: none;
+                margin: 20px 0 0;
+                padding: 0 12px;
+                border-radius: 4px;
+                box-shadow: $lotofacil 0 6px 0;
+                background-color: $lotofacil;
+                font-size: 22px;
+                height: 55px;
+                color: $white;
+                font-weight: bold;
+                width: 200px;
+            }
+
+            &__quina {
+                cursor: pointer;
+                border: none;
+                margin: 20px 0 0;
+                padding: 0 12px;
+                border-radius: 4px;
+                box-shadow: $quina 0 6px 0;
+                background-color: $quina;
+                font-size: 22px;
+                height: 55px;
+                color: $white;
+                font-weight: bold;
+                width: 200px;
+            }
+
+            &__lotomania {
+                cursor: pointer;
+                border: none;
+                margin: 20px 0 0;
+                padding: 0 12px;
+                border-radius: 4px;
+                box-shadow: $lotomania 0 6px 0;
+                background-color: $lotomania;
+                font-size: 22px;
+                height: 55px;
+                color: $white;
+                font-weight: bold;
+                width: 200px;
+            }
+        }
+    }
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    // Este trecho de estilo posiciona o footer na parte debaixo da tela
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &__txt {
+        margin: auto;
+        font-size: 14px;
+    }
+}
