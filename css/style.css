@@ -12,7 +12,6 @@ body {
   font-weight: 300;
   -webkit-tap-highlight-color: transparent;
   background-color: #db524d;
-  overflow-y: hidden;
 }
 
 .header__title {
@@ -133,6 +132,11 @@ body {
   font-weight: bold;
   margin-top: 20px;
 }
+.main__aleatorio {
+  font-size: 60px;
+  font-weight: bold;
+  margin-top: 20px;
+}
 .main__botao {
   position: relative;
   display: inline-block;
@@ -225,7 +229,7 @@ body {
 .footer {
   text-align: center;
   padding: 20px 0;
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);

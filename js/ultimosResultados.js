@@ -1,11 +1,11 @@
-var btnMega = document.querySelector("#mega");
+/*var btnMega = document.querySelector("#mega");
 
 btnMega.addEventListener("click", function() {
     console.log("DESGRAÇAAAA!!!!");
 
     var http = new XMLHttpRequest();
 
-    http.open("GET", "https://loterias-api-gutotech.herokuapp.com/api/v0/megasena/latest");
+    http.open("POST","https://apiloterias.com.br/app/resultado?loteria=megasena&token=m2RTNfsHSInbBko");
     http.addEventListener("load", function() {
         if (http.status == 200) {
             var resposta = http.responseText;
@@ -15,4 +15,4 @@ btnMega.addEventListener("click", function() {
         }
     });
     http.send();
-});
+});*/

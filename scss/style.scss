@@ -43,7 +43,6 @@ body {
     font-weight: 300;
     -webkit-tap-highlight-color: transparent;
     background-color: $goiaba;
-    overflow-y: hidden;
 }
 
 .header {
@@ -167,6 +166,12 @@ body {
         margin-top: 20px;
     }
 
+    &__aleatorio {
+        font-size: 60px;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
     &__botao {
        position: relative;
         display: inline-block;
@@ -269,7 +274,7 @@ body {
     text-align: center;
     padding: 20px 0;
     // Este trecho de estilo posiciona o footer na parte debaixo da tela
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
